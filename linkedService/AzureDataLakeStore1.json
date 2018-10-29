@@ -1,0 +1,13 @@
+{
+	"name": "AzureDataLakeStore1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "AzureDataLakeStore",
+		"typeProperties": {
+			"dataLakeStoreUri": "https://datalakedemoarisawa.azuredatalakestore.net/webhdfs/v1",
+			"tenant": "32db06e2-a846-4fc3-b61d-86d8bb168ff6",
+			"subscriptionId": "4edaa3eb-845a-4a6b-a73f-250e21b03dec",
+			"resourceGroupName": "DemoCreateSite"
+		}
+	}
+}
