@@ -1,0 +1,56 @@
+{
+	"name": "CopyPipeline_iom",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_iom",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "[dbo].[Customers]"
+					},
+					{
+						"name": "Destination",
+						"value": "[dbo].[Contact]"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "SqlSource"
+					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": 10000
+					},
+					"enableStaging": false,
+					"dataIntegrationUnits": 0,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": "FirstName: First, LastName: Last, Birthday: DOB"
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_iom",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_iom",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

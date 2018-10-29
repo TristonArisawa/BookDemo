@@ -1,0 +1,16 @@
+{
+	"name": "local",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=070-sql-02;initial catalog=master",
+			"userName": "tubecityims\\biztalkhostservice",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI0N2FiZjFjMS05OTI2LTRmZWEtYmM4MS1kZDEwNzIyN2MzNGUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntimefromlocal",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
