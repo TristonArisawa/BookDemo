@@ -6,6 +6,28 @@
 			"type": "LinkedServiceReference"
 		},
 		"type": "AzureDataLakeStoreFile",
+		"structure": [
+			{
+				"name": "ID",
+				"type": "String"
+			},
+			{
+				"name": "CustomerID",
+				"type": "String"
+			},
+			{
+				"name": "SaleDate",
+				"type": "String"
+			},
+			{
+				"name": "AmountOfSale",
+				"type": "String"
+			},
+			{
+				"name": "ItemPurchased",
+				"type": "String"
+			}
+		],
 		"typeProperties": {
 			"format": {
 				"type": "TextFormat",

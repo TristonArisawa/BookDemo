@@ -34,9 +34,11 @@
 					"translator": {
 						"type": "TabularTranslator",
 						"columnMappings": {
-							"FirstName": " First",
-							" LastName": " Last",
-							" Birthday": " DOB"
+							"ID": "ID",
+							"CustomerID": "CustomerID",
+							"DateOfSale": "SaleDate",
+							"AmountOfSale": "AmountOfSale",
+							"ItemPurchased": "ItemPurchased"
 						}
 					}
 				},
