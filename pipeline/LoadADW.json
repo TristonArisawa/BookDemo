@@ -88,6 +88,12 @@
 						"writeBatchSize": 10000
 					},
 					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "AzureBlobStorageArisawaDW",
+							"type": "LinkedServiceReference"
+						}
+					},
 					"dataIntegrationUnits": 0,
 					"translator": {
 						"type": "TabularTranslator",
