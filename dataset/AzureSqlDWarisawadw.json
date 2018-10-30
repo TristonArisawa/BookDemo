@@ -1,0 +1,39 @@
+{
+	"name": "AzureSqlDWarisawadw",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDW1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlDWTable",
+		"structure": [
+			{
+				"name": "CustomerID",
+				"type": "String"
+			},
+			{
+				"name": "LastName",
+				"type": "String"
+			},
+			{
+				"name": "FirstName",
+				"type": "String"
+			},
+			{
+				"name": "Birthday",
+				"type": "DateTime"
+			},
+			{
+				"name": "CreatedOn",
+				"type": "DateTime"
+			},
+			{
+				"name": "ModifiedOn",
+				"type": "DateTime"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[StageCustomers]"
+		}
+	}
+}
