@@ -87,7 +87,7 @@
 						"allowPolyBase": false,
 						"writeBatchSize": 10000
 					},
-					"enableStaging": false,
+					"enableStaging": true,
 					"dataIntegrationUnits": 0,
 					"translator": {
 						"type": "TabularTranslator",
@@ -112,6 +112,32 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Call_Sproc",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Copy_to_stage_Sales",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[LoadDataFromStaging]"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDW1",
+					"type": "LinkedServiceReference"
+				}
 			}
 		]
 	}
