@@ -38,10 +38,7 @@
 				"skipLineCount": 0,
 				"firstRowAsHeader": true
 			},
-			"fileName": {
-				"value": "@concat('Export_',formatDateTime(utcnow(),'ss'),'.txt')",
-				"type": "Expression"
-			},
+			"fileName": "Export.txt",
 			"folderPath": "SalesData"
 		}
 	}
