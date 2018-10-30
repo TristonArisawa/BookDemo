@@ -62,6 +62,14 @@
 			{
 				"name": "Copy_to_stage_Sales",
 				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Copy_To_Stage_Cust",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
